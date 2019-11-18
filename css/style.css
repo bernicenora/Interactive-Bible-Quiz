@@ -4,31 +4,46 @@
 }
 
 .container{
-    width:900px;
-    height:400px;
     background:#ddd;
+    height:400px;
     margin:0 auto;
     position:relative;
+    width:900px;
 }
 
 .header{
-    padding:10px;
-    height:50px;
     color:violet;
+    height:140px;
+    padding:10px;
     text-align:center;
 }
 
 .main{
-    padding:10px;
-    height:300px;
+    background:rgba(238,130,238,0.6);
+    -webkit-box-shadow: inset 2px 2px 2px #ddd;
+    box-shadow: inset 2px 2px 2px #ddd;
     color:black;
+    height:200px;
+    margin:0 auto;
+    padding:30px;
     text-align:center;
+    width:800px;
+}
+
+.question{
+    margin-left: 50px;
+    text-align: left;
+}
+
+.choices{
+    margin-left: 50px;
+    text-align: left;
 }
 
 .next{
-    text-align: center;
-    padding:7px;
     background:violet;
+    padding:7px;
+    text-align: center;
 }
 
 .next:hover{
@@ -36,10 +51,9 @@
     }
 
 .submit{
-    text-align: center;
-    padding:7px;
     background:rgba(128,128,128,0.8);
-
+    padding:7px;
+    text-align: center;
 }
 
 .submit:hover{
@@ -47,8 +61,8 @@
     }
 
 .buttons{
-   position:absolute;
     bottom:15px;
+    position:absolute;
     left:45%;
 }
 

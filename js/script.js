@@ -1,3 +1,5 @@
+/*My Master Array Object of Questions */
+/*Any random question will be populated in the front-end */
 let qaArray=[
     {
         question:"How many disciples did Jesus choose",
@@ -51,6 +53,6 @@ let qaArray=[
     }
 ];
 
-
+let questionNumber = document.getElementById("questionNumber");
 
 
