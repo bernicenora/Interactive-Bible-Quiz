@@ -12,18 +12,18 @@
             </div>
             <div class="main">
                 <div class="question" id="question">
-                    <p><span id="questionNumber">1</span>How many disciples did Jesus choose?</p>
+                    <p><span id="questionNumber" onload="displayQuestion();"></span><span id = "questionDesc" onload="displayQuestion();">How many disciples did Jesus choose?</span></p>
                 </div>
                 <div class="choices">
-                    <input type="radio" value="9" name="answer1">9<br>
-                    <input type="radio" value="12" name="answer1">12<br>
-                    <input type="radio" value="13" name="answer1">13<br>
-                    <input type="radio" value="7" name="answer1">7<br>
+                    <input type="radio" value="9" name="answer">9<br>
+                    <input type="radio" value="12" name="answer">12<br>
+                    <input type="radio" value="13" name="answer">13<br>
+                    <input type="radio" value="7" name="answer">7<br>
                 </div>
             </div>
             <div class="buttons">
-                <button class="next">Next</button>
-                <button class="submit">Submit</button>
+                <button class="next" id="next">Next</button>
+                <button class="submit" id = "submit">Submit</button>
             </div>
         </div>
         <script type="text/javascript" src="js/script.js"></script>
