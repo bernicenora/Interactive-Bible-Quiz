@@ -56,45 +56,52 @@ var qaArray=[
 //Pick a question from the array to populate the display panel
 var questionNumber = document.getElementById("questionNumber");
 var questionDesc = document.getElementById("questionDesc");
+var answerchoice = document.getElementsByName("answer");
+var choice1 = document.getElementById("choice1");
+var choice2 = document.getElementById("choice2");
+var choice3 = document.getElementById("choice3");
+var choice4 = document.getElementById("choice4");
+var choiceA = document.getElementById("choiceA");
+var choiceB = document.getElementById("choiceB");
+var choiceC = document.getElementById("choiceC");
+var choiceD = document.getElementById("choiceD");
+var btn = document.getElementById("next");
+//var choices = document.getElementsByClassName("choices");
 
-var i;
+var i=1; //counter
 var score=0; //To calculate the score
 // When the window loads, load the question related details
-window.onload = function displayQuestion(){
-    let dis = "."; //Append the .
+window.onload = function(){
+    let dis = ". "; //Append the .
     let qMark = " ?" //Append the ? symbol at the end of the question
-    // Take the whole Array Object in a loop
-    for (i=0;i<qaArray.length;i++){
+    //Getting the Question 1 and the relevant Options to display on the page
+    questionDesc.innerHTML = 1+dis+qaArray[0].question+qMark;
+    choice1.firstChild.nodeValue = qaArray[0].options[0];
+    choice2.firstChild.nodeValue = qaArray[0].options[1];
+    choice3.firstChild.nodeValue = qaArray[0].options[2];
+    choice4.firstChild.nodeValue = qaArray[0].options[3];
 
-        // Displaying the number on the page
-        //questionNumber.innerHTML = i+1+dis;
-        // Displaying the question and question mark on the page
-        //questionDesc.innerHTML = qaArray[i].question + qMark;
+    // When the NEXT button is clicked, display the next question in the array
+    btn.onclick = function(){
+        //console.log(i);
+        //Check first question's answer
+        console.log(qaArray[0].answer);
+        console.log(choiceB.checked);
+        console.log(qaArray[i].answer);
 
-        //var answerchoice = document.getElementsByTagName('input');
-        //console.log(answerchoice);
-        console.log(qaArray[i].question);
-           console.log(qaArray[i].answer);
-        for(var j=0;j<qaArray[i].options.length;j++){
-            console.log(qaArray[i].options[j]);
-           //answerchoice.innerHTML = answerchoice[i];
 
+        //Display the question and the relevant choices
+        questionDesc.innerHTML = i+1+dis+qaArray[i].question+qMark;
+        choice1.firstChild.nodeValue = qaArray[i].options[0];
+        choice2.firstChild.nodeValue = qaArray[i].options[1];
+        choice3.firstChild.nodeValue = qaArray[i].options[2];
+        choice4.firstChild.nodeValue = qaArray[i].options[3];
+        i+=1; //increment the counter to go to the next question in the array
+        if (i>9){ // All 10 questions are done, and so check for the end of the question array
+            //Once done, log out ti console
+            console.log("done and ready for scoring!");
+            // Diable the next button and shift the focus to the SUBMIT button
+            btn.disabled = true;
         }
     }
 }
-
-
-/*
-var btn = document.getElementById("next");
-btn.onclick = function(){
-    window.onload = function displayQuestionNumber(){
-    let dis = ".";
-    //for (var i=0;i<qaArray.length;i++){
-    //dis += '${i}+1';
-
-    questionNumber.innerHTML = 1+dis;
-//}
-
-}
-}
-*/
