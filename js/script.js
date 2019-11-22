@@ -176,15 +176,12 @@ window.onload = function(){
                     }
                 }
                 //console.log(score);
-                //Log out the score on an alert box!
-                /*if (score>5){
-                    alert("Wohoo!! You have scored "+score+" points. Good job!!");
+                //Log out the score on the page!
+                if (score>5){
+                    success.firstChild.nodeValue = "Wohoo!! You have scored "+score+" points. Good job!!";
                 }else{
-                    alert("You have scored "+score+" points. Better luck next time!!");
-                }*/
-                console.log(score);
-                success.firstChild.nodeValue = "You have scored "+score;
-                console.log(success.firstChild.nodeValue);
+                    success.firstChild.nodeValue = "You have scored "+score+" points. Better luck next time!!";
+                }
             } //End of checks for Submit Button
         } //End of checks for last question
     }
