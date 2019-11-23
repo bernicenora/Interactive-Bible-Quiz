@@ -144,6 +144,7 @@ window.onload = function(){
             btnSubmit.disabled = false; //Enable the Submit Button
             btnSubmit.onclick = function(){
                 //console.log(i);
+                btnSubmit.disabled = true; //Disable the Submit Button
                 if (choiceA.checked){
                     if (qaArray[i-1].answer == choice1.firstChild.nodeValue){
                         score += 1;
@@ -182,6 +183,7 @@ window.onload = function(){
                 }else{
                     success.firstChild.nodeValue = "You have scored "+score+" points. Better luck next time!!";
                 }
+
             } //End of checks for Submit Button
         } //End of checks for last question
     }
